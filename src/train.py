@@ -19,11 +19,21 @@ DATA_PATH = config["data_path"]
 TARGET = config["target"]
 
 # =====================
-# MLflow setup
+# MLflow (robusto en CI)
 # =====================
-tracking_path = os.path.abspath("mlruns")
-mlflow.set_tracking_uri(f"file://{tracking_path}")
-mlflow.set_experiment("wine-quality-exp")
+# DB local + carpeta de artefactos local (sin rutas raras)
+os.makedirs("artifacts", exist_ok=True)
+mlflow.set_tracking_uri("sqlite:///mlflow.db")
+
+EXPERIMENT_NAME = "wine-quality-exp"
+
+exp = mlflow.get_experiment_by_name(EXPERIMENT_NAME)
+if exp is None:
+    mlflow.create_experiment(
+        EXPERIMENT_NAME,
+        artifact_location="file://" + os.path.abspath("artifacts"),
+    )
+mlflow.set_experiment(EXPERIMENT_NAME)
 
 # =====================
 # LOAD DATA
@@ -31,7 +41,7 @@ mlflow.set_experiment("wine-quality-exp")
 df = pd.read_csv(DATA_PATH, sep=";")
 
 # =====================
-# PREPROCESSING
+# PREPROCESS
 # =====================
 df[TARGET] = (df[TARGET] >= 6).astype(int)
 

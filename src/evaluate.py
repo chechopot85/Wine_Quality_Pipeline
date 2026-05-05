@@ -3,11 +3,10 @@ import os
 
 # misma ruta que train
 tracking_path = os.path.abspath("mlruns")
-mlflow.set_tracking_uri(f"file://{tracking_path}")
+mlflow.set_tracking_uri("sqlite:///mlflow.db")
 
-experiment_name = "wine-quality-exp"
+experiment = mlflow.get_experiment_by_name("wine-quality-exp")
 
-experiment = mlflow.get_experiment_by_name(experiment_name)
 
 if experiment is None:
     print("⚠️ No existe el experimento, se omite evaluación")
