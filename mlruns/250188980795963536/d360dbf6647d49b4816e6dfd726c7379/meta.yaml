@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/sergiodavidmirandabautista/proyecto_ml/mlruns/250188980795963536/d360dbf6647d49b4816e6dfd726c7379/artifacts
+end_time: 1777951889237
+entry_point_name: ''
+experiment_id: '250188980795963536'
+lifecycle_stage: active
+run_id: d360dbf6647d49b4816e6dfd726c7379
+run_name: calm-hawk-546
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1777951887887
+status: 3
+tags: []
+user_id: sergiodavidmirandabautista

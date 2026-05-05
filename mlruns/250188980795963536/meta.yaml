@@ -1,0 +1,8 @@
+artifact_location: file:///Users/sergiodavidmirandabautista/proyecto_ml/mlruns/250188980795963536
+creation_time: 1777951765944
+experiment_id: '250188980795963536'
+last_update_time: 1777951765944
+lifecycle_stage: active
+name: wine-quality-exp
+trace_location: null
+workspace: default

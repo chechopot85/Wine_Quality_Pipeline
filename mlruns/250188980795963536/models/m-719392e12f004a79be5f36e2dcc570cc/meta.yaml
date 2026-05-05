@@ -1,0 +1,10 @@
+artifact_location: file:///Users/sergiodavidmirandabautista/proyecto_ml/mlruns/250188980795963536/models/m-719392e12f004a79be5f36e2dcc570cc/artifacts
+creation_timestamp: 1777951766035
+experiment_id: '250188980795963536'
+last_updated_timestamp: 1777951767370
+model_id: m-719392e12f004a79be5f36e2dcc570cc
+model_type: null
+name: model
+source_run_id: fb43c126c9734ab78e987d409d411f20
+status: 2
+status_message: null
